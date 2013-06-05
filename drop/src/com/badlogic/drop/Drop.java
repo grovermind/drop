@@ -31,7 +31,7 @@ public class Drop implements ApplicationListener {
    @Override
    public void create() {
       // load the images for the droplet and the bucket, 48x48 pixels each
-      dropImage = new Texture(Gdx.files.internal("droplet.png"));
+      dropImage = new Texture(Gdx.files.internal("droplet2.png"));
       bucketImage = new Texture(Gdx.files.internal("bucket.png"));
       
       // load the drop sound effect and the rain background "music"
@@ -91,6 +91,7 @@ public class Drop implements ApplicationListener {
       batch.draw(bucketImage, bucket.x, bucket.y);
       for(Rectangle raindrop: raindrops) {
          batch.draw(dropImage, raindrop.x, raindrop.y);
+    	
       }
       batch.end();
       
